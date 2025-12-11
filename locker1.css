@@ -1,0 +1,183 @@
+/* استيراد الخطوط */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
+
+/* الحاوية الرئيسية */
+.c {
+  background-color: #0d0d0d; /* خلفية سوداء */
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  width: 100%;
+  max-width: 450px; /* عرض مناسب للموبايل */
+  margin: 0 auto;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+  border: 1px solid #333;
+  text-align: center;
+  position: relative;
+}
+
+/* الهيدر (الشريط العلوي) */
+.h {
+  background-color: #1a1a1a;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #39ff14; /* خط أخضر نيون */
+}
+
+.ht {
+  font-size: 12px;
+  font-weight: 900;
+  color: #39ff14;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.hs {
+  font-size: 14px;
+}
+
+/* منطقة الأيقونة والعنوان */
+.b {
+  padding: 30px 20px 10px 20px;
+}
+
+.bi {
+  width: 90px;
+  height: 90px;
+  border-radius: 18px;
+  border: 2px solid #39ff14;
+  box-shadow: 0 0 15px rgba(57, 255, 20, 0.3);
+  margin-bottom: 15px;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.bt h2 {
+  font-size: 20px;
+  margin: 0;
+  line-height: 1.3;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.thin {
+  font-size: 16px;
+  font-weight: 400;
+  color: #00a2ff; /* أزرق Blox Fruits */
+  display: block;
+  margin-top: 5px;
+}
+
+.bm {
+  font-size: 11px;
+  color: #888;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.g {
+  color: #39ff14;
+  background: rgba(57, 255, 20, 0.1);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+/* صندوق الرسالة */
+.msg {
+  background: #111;
+  margin: 15px 20px;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px dashed #444;
+}
+
+.mt {
+  color: #E50914; /* أحمر للتحذير */
+  font-size: 12px;
+  font-weight: 900;
+  margin-bottom: 5px;
+  letter-spacing: 0.5px;
+}
+
+.md {
+  font-size: 13px;
+  color: #ccc;
+  line-height: 1.5;
+}
+
+.md strong {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* شريط التقدم */
+.bar-container {
+    padding: 0 20px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.bar {
+  height: 8px;
+  background: #222;
+  border-radius: 4px;
+  flex-grow: 1;
+  overflow: hidden;
+}
+
+.fill {
+  height: 100%;
+  width: 90%; /* واقفة عند 90% */
+  background: linear-gradient(90deg, #00a2ff, #39ff14);
+  border-radius: 4px;
+  animation: pulse-bar 2s infinite;
+}
+
+.percentage {
+    font-size: 12px;
+    color: #39ff14;
+    font-weight: bold;
+}
+
+@keyframes pulse-bar {
+  0% { opacity: 1; }
+  50% { opacity: 0.7; }
+  100% { opacity: 1; }
+}
+
+/* الحالة في الأسفل */
+.st {
+  font-size: 11px;
+  color: #666;
+  padding-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.blink {
+  color: #00a2ff;
+  font-weight: bold;
+  animation: blinker 1.5s linear infinite;
+}
+
+@keyframes blinker {
+  50% { opacity: 0; }
+}
+
+/* تخصيص قائمة العروض (مهم جداً لتكون متناسقة) */
+/* ملاحظة: هذه الكلاسات تعتمد على OGAds، قد تحتاج تعديل */
+#offers {
+    background: transparent !important;
+}
+.offer-item {
+    background: #1f1f1f !important;
+    border: 1px solid #333 !important;
+    color: #fff !important;
+    margin-bottom: 5px !important;
+    border-radius: 5px !important;
+}
