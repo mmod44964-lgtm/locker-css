@@ -1,141 +1,138 @@
-/* 🔥 1. إصلاح الخلفية وإخفاء الهيدر الأزرق فقط 🔥 */
-
-/* إجبار الخلفية السوداء والسماح بالتمرير الطبيعي */
-body, html {
-    background-color: #0d0d0d !important;
+/* 🔥 1. الإبادة التامة للخلفية الزرقاء (Nuclear Background Fix) 🔥 */
+html, body {
+    background-color: #0d0d0d !important; /* أسود حالك */
+    background: #0d0d0d !important;
     background-image: none !important;
     margin: 0 !important;
     padding: 0 !important;
     width: 100% !important;
-    height: auto !important; /* إصلاح المشكلة هنا */
-    overflow-x: hidden !important;
+    min-height: 100vh !important;
 }
 
-/* إخفاء الهيدر الأزرق المزعج */
-header, #header, .header, .top-head, .lock-header, .navbar {
-    display: none !important;
-    height: 0 !important;
-    visibility: hidden !important;
-}
-
-/* تنظيف الحاويات الافتراضية من أي هوامش بيضاء */
-#wrapper, #container, .container, .wrapper {
+/* إخفاء الهيدر وخلفيات القالب الافتراضي */
+header, #header, .header, .navbar, .top-head { display: none !important; }
+#bg, .background, #wrapper, .wrapper {
     background: transparent !important;
-    border: none !important;
-    box-shadow: none !important;
-    padding-top: 10px !important; /* مسافة بسيطة من الأعلى */
-    margin-top: 0 !important;
-    max-width: 100% !important;
+    background-image: none !important;
+    padding-top: 0 !important;
 }
 
 /* ------------------------------------------------ */
 
-/* 🔥 2. تصميم الصندوق الخاص بنا (Blox Fruits Box) 🔥 */
+/* 🔥 2. تصميم "بدون حواف" (Seamless Design) 🔥 */
 
 /* استيراد الخطوط */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
 
-/* الحاوية الرئيسية */
+/* الحاوية العلوية - إزالة الحواف والظل لتندمج مع الخلفية */
 .c {
-  background-color: #0d0d0d;
+  background-color: transparent; /* جعل الخلفية شفافة */
   color: #fff;
   font-family: 'Roboto', sans-serif;
-  width: 95%;              
-  max-width: 450px;       /* عرض ثابت */
-  margin: 10px auto 20px auto; /* توسيط أفقي مع مسافة سفلية */
-  border-radius: 15px;
-  overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.8);
-  border: 1px solid #333;
+  width: 100%;             /* عرض كامل */
+  max-width: 500px;        /* أقصى عرض */
+  margin: 0 auto;          /* توسيط */
+  padding-top: 20px;
+  border: none;            /* إزالة الحدود */
+  box-shadow: none;        /* إزالة الظل */
   text-align: center;
   position: relative;
-  display: block; /* ضمان الظهور ككتلة */
 }
 
-/* الهيدر الخاص بنا */
+/* الهيدر الخاص بنا (الأخضر) */
 .h {
+  display: inline-block; /* لجعله يبدو كزر أو شارة */
   background-color: #1a1a1a;
-  padding: 15px 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 2px solid #39ff14;
+  padding: 8px 20px;
+  border-radius: 50px;
+  border: 1px solid #39ff14;
+  margin-bottom: 20px;
 }
 
 .ht {
-  font-size: 12px; font-weight: 900; color: #39ff14; letter-spacing: 1px; text-transform: uppercase;
+  font-size: 11px; font-weight: 900; color: #39ff14; letter-spacing: 1px; text-transform: uppercase;
 }
-.hs { font-size: 14px; }
+.hs { display: none; } /* إخفاء الأيقونة الجانبية للتبسيط */
 
 /* المحتوى */
-.b { padding: 30px 20px 10px 20px; }
+.b { padding: 0 20px; }
 
 .bi {
-  width: 90px; height: 90px; border-radius: 18px; border: 2px solid #39ff14;
-  box-shadow: 0 0 15px rgba(57, 255, 20, 0.3); margin-bottom: 15px;
+  width: 100px; height: 100px; border-radius: 22px; 
+  border: 3px solid #39ff14; /* إطار أخضر سميك */
+  box-shadow: 0 0 25px rgba(57, 255, 20, 0.4); /* توهج قوي */
+  margin-bottom: 15px;
   object-fit: cover; object-position: center top;
 }
 
-.bt h2 { font-size: 20px; margin: 0; line-height: 1.3; font-weight: 900; text-transform: uppercase; }
-.thin { font-size: 16px; font-weight: 400; color: #00a2ff; display: block; margin-top: 5px; }
-.bm { font-size: 11px; color: #888; margin-top: 10px; font-weight: bold; }
+.bt h2 { font-size: 18px; margin: 0; line-height: 1.4; font-weight: 900; text-transform: uppercase; }
+.thin { font-size: 14px; font-weight: 400; color: #00a2ff; display: block; margin-top: 5px; }
+.bm { font-size: 11px; color: #666; margin-top: 8px; font-weight: bold; }
 .g { color: #39ff14; background: rgba(57, 255, 20, 0.1); padding: 2px 6px; border-radius: 4px; }
 
 /* الرسالة */
 .msg {
-  background: #111; margin: 15px 20px; padding: 15px; border-radius: 8px; border: 1px dashed #444;
+  background: #111; 
+  margin: 20px 10px 10px 10px; 
+  padding: 15px; 
+  border-radius: 10px; 
+  border: 1px solid #333;
 }
-.mt { color: #E50914; font-size: 12px; font-weight: 900; margin-bottom: 5px; letter-spacing: 0.5px; }
-.md { font-size: 13px; color: #ccc; line-height: 1.5; }
+.mt { color: #E50914; font-size: 12px; font-weight: 900; margin-bottom: 5px; }
+.md { font-size: 13px; color: #ccc; }
 .md strong { color: #fff; text-decoration: underline; }
 
 /* شريط التقدم */
-.bar-container { padding: 0 20px; margin-bottom: 10px; display: flex; align-items: center; gap: 10px; }
-.bar { height: 8px; background: #222; border-radius: 4px; flex-grow: 1; overflow: hidden; }
-.fill { height: 100%; width: 90%; background: linear-gradient(90deg, #00a2ff, #39ff14); border-radius: 4px; animation: pulse-bar 2s infinite; }
-.percentage { font-size: 12px; color: #39ff14; font-weight: bold; }
-@keyframes pulse-bar { 0% { opacity: 1; } 50% { opacity: 0.7; } 100% { opacity: 1; } }
+.bar-container { padding: 0 20px; margin: 15px 0; display: flex; align-items: center; gap: 10px; }
+.bar { height: 6px; background: #222; border-radius: 10px; flex-grow: 1; overflow: hidden; }
+.fill { height: 100%; width: 95%; background: #39ff14; box-shadow: 0 0 10px #39ff14; border-radius: 10px; }
+.percentage { font-size: 11px; color: #39ff14; font-weight: bold; }
 
 /* الحالة */
-.st { font-size: 11px; color: #666; padding-bottom: 20px; text-transform: uppercase; letter-spacing: 1px; }
-.blink { color: #00a2ff; font-weight: bold; animation: blinker 1.5s linear infinite; }
-@keyframes blinker { 50% { opacity: 0; } }
+.st { font-size: 10px; color: #555; padding-bottom: 10px; text-transform: uppercase; letter-spacing: 1px; }
+.blink { color: #00a2ff; animation: blinker 1.5s linear infinite; }
 
-/* 🔥 3. تنسيق قائمة العروض (إصلاح التداخل) 🔥 */
+/* 🔥 3. دمج العروض (The Offers Integration) 🔥 */
 
-/* ضبط حاوية العروض لتكون بنفس عرض الصندوق الخاص بنا */
 #offers, .offers {
-    width: 95% !important;
-    max-width: 450px !important;
-    margin: 0 auto !important; /* توسيط القائمة */
+    width: 100% !important;
+    max-width: 500px !important;
+    margin: 0 auto !important;
+    padding: 0 10px !important; /* هوامش جانبية بسيطة */
     background: transparent !important;
-    display: block !important;
 }
 
-/* تنسيق كل عرض ليبدو جميلاً ومنفصلاً */
+/* تصميم العروض لتكون نظيفة جداً */
 .offer-item, .offer-row {
-    background-color: #1a1a1a !important; /* لون رمادي غامق */
-    border: 1px solid #333 !important;
-    border-radius: 10px !important;
-    margin-bottom: 10px !important;
-    padding: 10px !important;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.3) !important;
-    position: relative !important;
+    background-color: #1a1a1a !important;
+    border: 1px solid #333 !important; /* إطار خفيف */
+    border-radius: 12px !important;    /* حواف دائرية */
+    margin-bottom: 8px !important;     /* مسافة صغيرة بين العروض */
+    padding: 12px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
 }
 
-/* النصوص داخل العروض */
+/* إزالة أي خلفيات زرقاء قديمة من العروض */
+.offer-item:hover {
+    background-color: #222 !important;
+    border-color: #39ff14 !important; /* إضاءة خضراء عند اللمس */
+}
+
 .offer-text, .offer-anchor {
     color: #fff !important;
     font-size: 13px !important;
     font-weight: 600 !important;
-    text-decoration: none !important;
 }
 
-/* تحسين شكل الأزرار داخل العروض (Free/Install) */
+/* زر العرض */
 .offer-button, .btn {
-    background-color: #00a2ff !important;
-    border-radius: 5px !important;
+    background: #00a2ff !important;
     color: #fff !important;
-    font-weight: bold !important;
+    border-radius: 6px !important;
+    padding: 5px 15px !important;
+    font-size: 12px !important;
     border: none !important;
+    box-shadow: 0 4px 10px rgba(0, 162, 255, 0.3) !important;
 }
